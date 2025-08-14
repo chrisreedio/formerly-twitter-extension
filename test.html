@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page for Formerly Twitter Extension</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+        .test-text { background: #f0f0f0; padding: 10px; margin: 10px 0; border-left: 3px solid #007cba; }
+    </style>
+</head>
+<body>
+    <h1>Test Page for "Formerly Twitter" Text Remover</h1>
+    <p>This page contains various instances of "formerly Twitter" text that should be removed by the extension.</p>
+    
+    <div class="test-text">
+        <p>X (formerly Twitter) announced new features today.</p>
+    </div>
+    
+    <div class="test-text">
+        <p>The social media platform formerly known as Twitter has been rebranded.</p>
+    </div>
+    
+    <div class="test-text">
+        <p>Users on X, formerly Twitter, are discussing the changes.</p>
+    </div>
+    
+    <div class="test-text">
+        <p>The company (formerly known as Twitter) is now called X.</p>
+    </div>
+    
+    <div class="test-text">
+        <p>X formerly twitter has millions of users worldwide.</p>
+    </div>
+    
+    <h2>Dynamic Content Test</h2>
+    <button onclick="addDynamicContent()">Add Dynamic Content</button>
+    <div id="dynamic-content"></div>
+    
+    <script>
+        function addDynamicContent() {
+            const div = document.getElementById('dynamic-content');
+            const p = document.createElement('p');
+            p.innerHTML = 'This is dynamically added content about X (formerly Twitter).';
+            p.style.background = '#ffe6e6';
+            p.style.padding = '10px';
+            p.style.margin = '10px 0';
+            div.appendChild(p);
+        }
+        
+        // Add some content after page load
+        setTimeout(() => {
+            addDynamicContent();
+        }, 1000);
+    </script>
+</body>
+</html>
